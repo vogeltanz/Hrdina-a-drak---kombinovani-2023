@@ -14,6 +14,8 @@ namespace Hrdina_a_drak___kombinovani.Postavy
         public int MaxUtok { get; set; }
         public int MaxObrana { get; set; }
 
+        private Random generator = new Random();
+
         public Postava(string jmeno, double zdraviAktualni, double zdraviMax, int maxUtok, int maxObrana)
         {
             Jmeno = jmeno;
@@ -30,20 +32,32 @@ namespace Hrdina_a_drak___kombinovani.Postavy
 
         public double Utok(Postava postava)
         {
-            //TODO
-            throw new NotImplementedException();
+            double utok = generator.NextDouble() * MaxUtok;
+            utok -= postava.Obrana();
+
+            if (utok < 0)
+                utok = 0;
+
+            postava.ZdraviAktualni -= utok;
+
+            return utok;
         }
 
         public double Obrana()
         {
-            //TODO
-            throw new NotImplementedException();
+            return generator.NextDouble() * MaxObrana;
         }
 
         public bool JeZivy()
         {
-            //TODO
-            throw new NotImplementedException();
+            if (ZdraviAktualni > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
