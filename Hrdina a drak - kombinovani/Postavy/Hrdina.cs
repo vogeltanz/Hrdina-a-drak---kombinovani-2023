@@ -7,23 +7,13 @@ using System.Threading.Tasks;
 
 namespace Hrdina_a_drak___kombinovani.Postavy
 {
-    internal class Hrdina
+    internal class Hrdina : Postava
     {
-        public string Jmeno { get; set; }
-        public double ZdraviAktualni { get; set; }
-        public double ZdraviMax { get; set; }
-        public int MaxUtok { get; set;}
-        public int MaxObrana { get; set;}
-
         public Mec Mec { get; set; }
 
         public Hrdina(string jmeno, double zdraviAktualni, double zdraviMax, int maxUtok, int maxObrana, Mec mec)
+            : base(jmeno, zdraviAktualni, zdraviMax, maxUtok, maxObrana)
         {
-            Jmeno = jmeno;
-            ZdraviAktualni = zdraviAktualni;
-            ZdraviMax = zdraviMax;
-            MaxUtok = maxUtok;
-            MaxObrana = maxObrana;
             Mec = mec;
         }
 
@@ -32,19 +22,10 @@ namespace Hrdina_a_drak___kombinovani.Postavy
         {
         }
 
-        public void Utok()
+        /*public double Utok(Postava postava)
         {
             //TODO
-        }
-
-        public void Obrana()
-        {
-            //TODO
-        }
-
-        public void JeZivy()
-        {
-            //TODO
-        }
+            throw new NotImplementedException();
+        }*/
     }
 }

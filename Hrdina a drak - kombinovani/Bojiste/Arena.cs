@@ -20,7 +20,33 @@ namespace Hrdina_a_drak___kombinovani.Bojiste
 
         public void Boj()
         {
-            //TODO
+            while (Hrdina.JeZivy() && Drak.JeZivy())
+            {
+                double utok = Hrdina.Utok(Drak);
+                Console.WriteLine($"{Hrdina.Jmeno} zaútočil hodnotou: {utok}");
+
+                if (Drak.JeZivy())
+                {
+                    utok = Drak.Utok(Hrdina);
+                    Console.WriteLine($"{Drak.Jmeno} zaútočil hodnotou: {utok}");
+                }
+            }
+        }
+
+        public void VypisViteze()
+        {
+            if(Hrdina.JeZivy() && Drak.JeZivy())
+            {
+                Console.WriteLine("Boj nemá vítěze!");
+            }
+            else if(Hrdina.JeZivy())
+            {
+                Console.WriteLine($"{Hrdina.Jmeno} zvítězil!");
+            }
+            else
+            {
+                Console.WriteLine($"{Drak.Jmeno} zvítězil!");
+            }
         }
     }
 }
