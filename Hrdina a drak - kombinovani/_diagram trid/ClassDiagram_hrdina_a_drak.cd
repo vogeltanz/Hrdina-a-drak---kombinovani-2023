@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Hrdina_a_drak___kombinovani.Bojiste.Arena">
+    <Position X="2.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAIAAAIAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Bojiste\Arena.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Drak" />
+      <Property Name="Hrdina" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.Postavy.Drak">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Postavy\Drak.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.Postavy.Hrdina">
+    <Position X="4.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Postavy\Hrdina.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Mec" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.Postavy.Postava">
+    <Position X="2.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgFAAAAAAAAAAAAEEABAQAAAAAAAAAAAAAAAAAQE=</HashCode>
+      <FileName>Postavy\Postava.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.Veci.Mec">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Veci\Mec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.Veci.Stit">
+    <Position X="7.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Veci\Stit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

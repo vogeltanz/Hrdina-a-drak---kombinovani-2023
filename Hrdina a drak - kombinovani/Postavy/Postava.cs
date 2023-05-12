@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hrdina_a_drak___kombinovani.Nahoda;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ namespace Hrdina_a_drak___kombinovani.Postavy
         public int MaxUtok { get; set; }
         public int MaxObrana { get; set; }
 
-        private Random generator = new Random();
+        private Kostka generator = Kostka.Instance;
 
         public Postava(string jmeno, double zdraviAktualni, double zdraviMax, int maxUtok, int maxObrana)
         {
