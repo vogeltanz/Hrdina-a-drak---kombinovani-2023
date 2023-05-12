@@ -35,6 +35,11 @@ namespace Hrdina_a_drak___kombinovani.Bojiste
             }
         }
 
+        public Task BojAsync()
+        {
+            return Task.Run(Boj);
+        }
+
         public void VypisViteze()
         {
             if (Postava1.JeZivy() && Postava2.JeZivy())

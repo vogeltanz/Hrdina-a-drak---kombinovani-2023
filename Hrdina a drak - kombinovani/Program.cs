@@ -23,7 +23,7 @@ List<Postava> postavy = new List<Postava>()
 foreach(var pos in postavy)
 {
     pos.Zautocil += VypisNaKonzoli.VypisUtoku;
-    pos.Zautocil += ZapisDoSouboru.Zapis;
+    //pos.Zautocil += ZapisDoSouboru.Zapis;
 }
 
 
@@ -40,7 +40,12 @@ vyfiltrovanySeznamPostav.ForEach(postava => Console.WriteLine($"{postava.Jmeno} 
 
 
 Arena arena = new Arena(hrdina, vlk);
-arena.Boj();
+Arena arena2 = new Arena(drak, hrdina2);
+
+//arena.Boj();
+await arena.BojAsync();
+arena2.BojAsync();
 arena.VypisViteze();
+arena2.VypisViteze();
 
 Console.ReadKey();
