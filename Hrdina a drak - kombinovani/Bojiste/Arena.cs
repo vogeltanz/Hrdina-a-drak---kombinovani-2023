@@ -21,22 +21,29 @@ namespace Hrdina_a_drak___kombinovani.Bojiste
 
         public void Boj()
         {
-            Bedna bedna = new Bedna(20);
-            while (Postava1.JeZivy() && Postava2.JeZivy())
+            using (StreamWriter streamWriter = File.CreateText("zaznam boje.txt"))
             {
-                double utok = Postava1.Utok(Postava2);
-                Console.WriteLine($"{Postava1.Jmeno} zaútočil hodnotou: {utok}");
-                
-                utok = Postava1.Utok(bedna);
-                Console.WriteLine($"{Postava1.Jmeno} rozbijí bednu útokem: {utok}");
-
-                if (Postava2.JeZivy())
+                Bedna bedna = new Bedna(20);
+                while (Postava1.JeZivy() && Postava2.JeZivy())
                 {
-                    utok = Postava2.Utok(Postava1);
-                    Console.WriteLine($"{Postava2.Jmeno} zaútočil hodnotou: {utok}");
+                    double utok = Postava1.Utok(Postava2);
+                    Console.WriteLine($"{Postava1.Jmeno} zaútočil hodnotou: {utok}");
+                    streamWriter.WriteLine($"{Postava1.Jmeno} zaútočil hodnotou: {utok}");
 
-                    utok = Postava2.Utok(bedna);
-                    Console.WriteLine($"{Postava2.Jmeno} rozbijí bednu útokem: {utok}");
+                    utok = Postava1.Utok(bedna);
+                    Console.WriteLine($"{Postava1.Jmeno} rozbijí bednu útokem: {utok}");
+                    streamWriter.WriteLine($"{Postava1.Jmeno} rozbijí bednu útokem: {utok}");
+
+                    if (Postava2.JeZivy())
+                    {
+                        utok = Postava2.Utok(Postava1);
+                        Console.WriteLine($"{Postava2.Jmeno} zaútočil hodnotou: {utok}");
+                        streamWriter.WriteLine($"{Postava2.Jmeno} zaútočil hodnotou: {utok}");
+
+                        utok = Postava2.Utok(bedna);
+                        Console.WriteLine($"{Postava2.Jmeno} rozbijí bednu útokem: {utok}");
+                        streamWriter.WriteLine($"{Postava2.Jmeno} rozbijí bednu útokem: {utok}");
+                    }
                 }
             }
         }

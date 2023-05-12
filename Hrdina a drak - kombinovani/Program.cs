@@ -35,3 +35,4 @@ Arena arena = new Arena(hrdina, vlk);
 arena.Boj();
 arena.VypisViteze();
 
+Console.ReadKey();
