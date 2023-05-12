@@ -1,4 +1,5 @@
 ﻿using Hrdina_a_drak___kombinovani.Nahoda;
+using Hrdina_a_drak___kombinovani.Rozhrani;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hrdina_a_drak___kombinovani.Postavy
 {
-    internal class Postava
+    internal class Postava : Object, IZasazitelny
     {
         public string Jmeno { get; set; }
         public double ZdraviAktualni { get; set; }
@@ -31,15 +32,15 @@ namespace Hrdina_a_drak___kombinovani.Postavy
         {
         }
 
-        public virtual double Utok(Postava postava)
+        public virtual double Utok(IZasazitelny zasazitelnaEntita)
         {
             double utok = generator.NextDouble() * MaxUtok;
-            utok -= postava.Obrana();
+            utok -= zasazitelnaEntita.Obrana();
 
             if (utok < 0)
                 utok = 0;
 
-            postava.ZdraviAktualni -= utok;
+            zasazitelnaEntita.ZdraviAktualni -= utok;
 
             return utok;
         }

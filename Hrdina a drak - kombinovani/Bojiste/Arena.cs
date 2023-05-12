@@ -1,4 +1,5 @@
-﻿using Hrdina_a_drak___kombinovani.Postavy;
+﻿using Hrdina_a_drak___kombinovani.Nabytek;
+using Hrdina_a_drak___kombinovani.Postavy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,15 +21,22 @@ namespace Hrdina_a_drak___kombinovani.Bojiste
 
         public void Boj()
         {
+            Bedna bedna = new Bedna(20);
             while (Postava1.JeZivy() && Postava2.JeZivy())
             {
                 double utok = Postava1.Utok(Postava2);
                 Console.WriteLine($"{Postava1.Jmeno} zaútočil hodnotou: {utok}");
+                
+                utok = Postava1.Utok(bedna);
+                Console.WriteLine($"{Postava1.Jmeno} rozbijí bednu útokem: {utok}");
 
                 if (Postava2.JeZivy())
                 {
                     utok = Postava2.Utok(Postava1);
                     Console.WriteLine($"{Postava2.Jmeno} zaútočil hodnotou: {utok}");
+
+                    utok = Postava2.Utok(bedna);
+                    Console.WriteLine($"{Postava2.Jmeno} rozbijí bednu útokem: {utok}");
                 }
             }
         }

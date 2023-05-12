@@ -1,4 +1,5 @@
-﻿using Hrdina_a_drak___kombinovani.Veci;
+﻿using Hrdina_a_drak___kombinovani.Rozhrani;
+using Hrdina_a_drak___kombinovani.Veci;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,23 +23,23 @@ namespace Hrdina_a_drak___kombinovani.Postavy
         {
         }
 
-        public override double Utok(Postava postava)
+        public override double Utok(IZasazitelny zasazitelnaEntita)
         {
             double utok = 0;
             if (Mec != null)
             {
                 utok = generator.NextDouble() * Mec.MaxUtok;
-                utok -= postava.Obrana();
+                utok -= zasazitelnaEntita.Obrana();
 
                 if (utok < 0)
                     utok = 0;
 
-                postava.ZdraviAktualni -= utok;
+                zasazitelnaEntita.ZdraviAktualni -= utok;
             }
             else
             {
                 //vyuziti metody z rodicovske tridy
-                base.Utok(postava);
+                base.Utok(zasazitelnaEntita);
             }
 
             return utok;
