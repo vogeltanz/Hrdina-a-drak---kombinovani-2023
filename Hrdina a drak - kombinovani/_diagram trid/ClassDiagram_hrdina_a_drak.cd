@@ -91,6 +91,10 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="System.Random">
+    <Position X="11.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
   <Interface Name="Hrdina_a_drak___kombinovani.Rozhrani.IZasazitelny">
     <Position X="8.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
