@@ -1,14 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Hrdina_a_drak___kombinovani.Bojiste.Arena">
-    <Position X="2.5" Y="7.25" Width="1.5" />
+    <Position X="0.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAAAAAAIAAAIAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAAACAAAAAAAAAIAAAAAAAAAAAAAAMA=</HashCode>
       <FileName>Bojiste\Arena.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Postava1" />
+      <Property Name="Postava2" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Hrdina_a_drak___kombinovani.Postavy.Hrdina">
-    <Position X="4.25" Y="4.75" Width="1.5" />
+    <Position X="7.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Postavy\Hrdina.cs</FileName>
@@ -18,7 +22,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Hrdina_a_drak___kombinovani.Postavy.Drak">
-    <Position X="2.5" Y="0.5" Width="2" />
+    <Position X="0.5" Y="5.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Postavy\Drak.cs</FileName>
@@ -26,18 +30,80 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Hrdina_a_drak___kombinovani.Veci.Mec">
-    <Position X="7.25" Y="3.75" Width="1.5" />
+    <Position X="9.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Veci\Mec.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Hrdina_a_drak___kombinovani.Veci.Stit">
-    <Position X="7.25" Y="5.5" Width="1.5" />
+    <Position X="9.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Veci\Stit.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.Postavy.Postava">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgFQAAAAAAAAAAAEECBAQAAAAAAAAAAAAAAAAAQE=</HashCode>
+      <FileName>Postavy\Postava.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="generator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.Nabytek.Bedna">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Nabytek\Bedna.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.Postavy.Vlk">
+    <Position X="4.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Postavy\Vlk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.ObsluhaUdalosti.ZapisDoSouboru">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObsluhaUdalosti\ZapisDoSouboru.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.ObsluhaUdalosti.VypisNaKonzoli">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObsluhaUdalosti\VypisNaKonzoli.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hrdina_a_drak___kombinovani.Nahoda.Kostka">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Nahoda\Kostka.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Hrdina_a_drak___kombinovani.Rozhrani.IZasazitelny">
+    <Position X="8.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rozhrani\IZasazitelny.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Hrdina_a_drak___kombinovani.Rozhrani.IRandom">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Rozhrani\IRandom.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
