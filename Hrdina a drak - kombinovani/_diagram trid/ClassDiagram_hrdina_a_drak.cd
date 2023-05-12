@@ -6,33 +6,23 @@
       <HashCode>AAAAAAAAACAAAAAAAAAAAAIAAAIAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>Bojiste\Arena.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Drak" />
-      <Property Name="Hrdina" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="Hrdina_a_drak___kombinovani.Postavy.Drak">
-    <Position X="0.75" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Postavy\Drak.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="Hrdina_a_drak___kombinovani.Postavy.Hrdina">
     <Position X="4.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Postavy\Hrdina.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Mec" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Hrdina_a_drak___kombinovani.Postavy.Postava">
+  <Class Name="Hrdina_a_drak___kombinovani.Postavy.Drak">
     <Position X="2.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAgFAAAAAAAAAAAAEEABAQAAAAAAAAAAAAAAAAAQE=</HashCode>
-      <FileName>Postavy\Postava.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Postavy\Drak.cs</FileName>
+      <NewMemberFileName>Postavy\Postava.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Hrdina_a_drak___kombinovani.Veci.Mec">

@@ -15,7 +15,7 @@ namespace Hrdina_a_drak___kombinovani.Postavy
         public int MaxUtok { get; set; }
         public int MaxObrana { get; set; }
 
-        private Kostka generator = Kostka.Instance;
+        protected Kostka generator = Kostka.Instance;
 
         public Postava(string jmeno, double zdraviAktualni, double zdraviMax, int maxUtok, int maxObrana)
         {
@@ -31,7 +31,7 @@ namespace Hrdina_a_drak___kombinovani.Postavy
         {
         }
 
-        public double Utok(Postava postava)
+        public virtual double Utok(Postava postava)
         {
             double utok = generator.NextDouble() * MaxUtok;
             utok -= postava.Obrana();

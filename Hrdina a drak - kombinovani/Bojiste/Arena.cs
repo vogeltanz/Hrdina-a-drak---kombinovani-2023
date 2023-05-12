@@ -9,43 +9,43 @@ namespace Hrdina_a_drak___kombinovani.Bojiste
 {
     internal class Arena
     {
-        public Hrdina Hrdina { get; set; }
-        public Drak Drak { get; set; }
+        public Postava Postava1 { get; set; }
+        public Postava Postava2 { get; set; }
 
-        public Arena(Hrdina hrdina, Drak drak)
+        public Arena(Postava postava1, Postava postava2)
         {
-            Hrdina = hrdina;
-            Drak = drak;
+            Postava1 = postava1;
+            Postava2 = postava2;
         }
 
         public void Boj()
         {
-            while (Hrdina.JeZivy() && Drak.JeZivy())
+            while (Postava1.JeZivy() && Postava2.JeZivy())
             {
-                double utok = Hrdina.Utok(Drak);
-                Console.WriteLine($"{Hrdina.Jmeno} zaútočil hodnotou: {utok}");
+                double utok = Postava1.Utok(Postava2);
+                Console.WriteLine($"{Postava1.Jmeno} zaútočil hodnotou: {utok}");
 
-                if (Drak.JeZivy())
+                if (Postava2.JeZivy())
                 {
-                    utok = Drak.Utok(Hrdina);
-                    Console.WriteLine($"{Drak.Jmeno} zaútočil hodnotou: {utok}");
+                    utok = Postava2.Utok(Postava1);
+                    Console.WriteLine($"{Postava2.Jmeno} zaútočil hodnotou: {utok}");
                 }
             }
         }
 
         public void VypisViteze()
         {
-            if(Hrdina.JeZivy() && Drak.JeZivy())
+            if(Postava1.JeZivy() && Postava2.JeZivy())
             {
                 Console.WriteLine("Boj nemá vítěze!");
             }
-            else if(Hrdina.JeZivy())
+            else if(Postava1.JeZivy())
             {
-                Console.WriteLine($"{Hrdina.Jmeno} zvítězil!");
+                Console.WriteLine($"{Postava1.Jmeno} zvítězil!");
             }
             else
             {
-                Console.WriteLine($"{Drak.Jmeno} zvítězil!");
+                Console.WriteLine($"{Postava2.Jmeno} zvítězil!");
             }
         }
     }

@@ -22,10 +22,26 @@ namespace Hrdina_a_drak___kombinovani.Postavy
         {
         }
 
-        /*public double Utok(Postava postava)
+        public override double Utok(Postava postava)
         {
-            //TODO
-            throw new NotImplementedException();
-        }*/
+            double utok = 0;
+            if (Mec != null)
+            {
+                utok = generator.NextDouble() * Mec.MaxUtok;
+                utok -= postava.Obrana();
+
+                if (utok < 0)
+                    utok = 0;
+
+                postava.ZdraviAktualni -= utok;
+            }
+            else
+            {
+                //vyuziti metody z rodicovske tridy
+                base.Utok(postava);
+            }
+
+            return utok;
+        }
     }
 }
