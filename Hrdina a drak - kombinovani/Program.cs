@@ -1,5 +1,6 @@
 ﻿using Hrdina_a_drak___kombinovani.Bojiste;
 using Hrdina_a_drak___kombinovani.Nahoda;
+using Hrdina_a_drak___kombinovani.ObsluhaUdalosti;
 using Hrdina_a_drak___kombinovani.Postavy;
 using Hrdina_a_drak___kombinovani.Veci;
 
@@ -18,6 +19,13 @@ List<Postava> postavy = new List<Postava>()
     drak,
     vlk
 };
+
+foreach(var pos in postavy)
+{
+    pos.Zautocil += VypisNaKonzoli.VypisUtoku;
+    pos.Zautocil += ZapisDoSouboru.Zapis;
+}
+
 
 double prumernyUtokPostav =
     postavy.Average(postava => postava.MaxUtok);

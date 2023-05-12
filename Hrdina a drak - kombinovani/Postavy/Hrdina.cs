@@ -35,6 +35,8 @@ namespace Hrdina_a_drak___kombinovani.Postavy
                     utok = 0;
 
                 zasazitelnaEntita.ZdraviAktualni -= utok;
+
+                VyvolaniUdalostiZautocil(utok, zasazitelnaEntita);
             }
             else
             {

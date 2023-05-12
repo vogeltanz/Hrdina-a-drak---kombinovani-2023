@@ -18,6 +18,8 @@ namespace Hrdina_a_drak___kombinovani.Postavy
 
         protected IRandom generator;
 
+        public event Action<double, Postava, IZasazitelny> Zautocil;
+
         public Postava(string jmeno, double zdraviAktualni, double zdraviMax, int maxUtok, int maxObrana, IRandom generator)
         {
             Jmeno = jmeno;
@@ -43,7 +45,14 @@ namespace Hrdina_a_drak___kombinovani.Postavy
 
             zasazitelnaEntita.ZdraviAktualni -= utok;
 
+            VyvolaniUdalostiZautocil(utok, zasazitelnaEntita);
+
             return utok;
+        }
+
+        protected void VyvolaniUdalostiZautocil(double utok, IZasazitelny zasazitelnaEntita)
+        {
+            Zautocil?.Invoke(utok, this, zasazitelnaEntita);
         }
 
         public double Obrana()

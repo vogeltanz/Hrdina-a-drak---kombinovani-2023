@@ -21,40 +21,27 @@ namespace Hrdina_a_drak___kombinovani.Bojiste
 
         public void Boj()
         {
-            using (StreamWriter streamWriter = File.CreateText("zaznam boje.txt"))
+            Bedna bedna = new Bedna(20);
+            while (Postava1.JeZivy() && Postava2.JeZivy())
             {
-                Bedna bedna = new Bedna(20);
-                while (Postava1.JeZivy() && Postava2.JeZivy())
+                double utok = Postava1.Utok(Postava2);
+                utok = Postava1.Utok(bedna);
+
+                if (Postava2.JeZivy())
                 {
-                    double utok = Postava1.Utok(Postava2);
-                    Console.WriteLine($"{Postava1.Jmeno} zaútočil hodnotou: {utok}");
-                    streamWriter.WriteLine($"{Postava1.Jmeno} zaútočil hodnotou: {utok}");
-
-                    utok = Postava1.Utok(bedna);
-                    Console.WriteLine($"{Postava1.Jmeno} rozbijí bednu útokem: {utok}");
-                    streamWriter.WriteLine($"{Postava1.Jmeno} rozbijí bednu útokem: {utok}");
-
-                    if (Postava2.JeZivy())
-                    {
-                        utok = Postava2.Utok(Postava1);
-                        Console.WriteLine($"{Postava2.Jmeno} zaútočil hodnotou: {utok}");
-                        streamWriter.WriteLine($"{Postava2.Jmeno} zaútočil hodnotou: {utok}");
-
-                        utok = Postava2.Utok(bedna);
-                        Console.WriteLine($"{Postava2.Jmeno} rozbijí bednu útokem: {utok}");
-                        streamWriter.WriteLine($"{Postava2.Jmeno} rozbijí bednu útokem: {utok}");
-                    }
+                    utok = Postava2.Utok(Postava1);
+                    utok = Postava2.Utok(bedna);
                 }
             }
         }
 
         public void VypisViteze()
         {
-            if(Postava1.JeZivy() && Postava2.JeZivy())
+            if (Postava1.JeZivy() && Postava2.JeZivy())
             {
                 Console.WriteLine("Boj nemá vítěze!");
             }
-            else if(Postava1.JeZivy())
+            else if (Postava1.JeZivy())
             {
                 Console.WriteLine($"{Postava1.Jmeno} zvítězil!");
             }
