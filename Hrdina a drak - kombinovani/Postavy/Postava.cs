@@ -16,19 +16,20 @@ namespace Hrdina_a_drak___kombinovani.Postavy
         public int MaxUtok { get; set; }
         public int MaxObrana { get; set; }
 
-        protected Kostka generator = Kostka.Instance;
+        protected IRandom generator;
 
-        public Postava(string jmeno, double zdraviAktualni, double zdraviMax, int maxUtok, int maxObrana)
+        public Postava(string jmeno, double zdraviAktualni, double zdraviMax, int maxUtok, int maxObrana, IRandom generator)
         {
             Jmeno = jmeno;
             ZdraviAktualni = zdraviAktualni;
             ZdraviMax = zdraviMax;
             MaxUtok = maxUtok;
             MaxObrana = maxObrana;
+            this.generator = generator;
         }
 
-        public Postava(string jmeno, double zdraviMax, int maxUtok, int maxObrana)
-            : this(jmeno, zdraviMax, zdraviMax, maxUtok, maxObrana)
+        public Postava(string jmeno, double zdraviMax, int maxUtok, int maxObrana, IRandom generator)
+            : this(jmeno, zdraviMax, zdraviMax, maxUtok, maxObrana, generator)
         {
         }
 

@@ -12,14 +12,14 @@ namespace Hrdina_a_drak___kombinovani.Postavy
     {
         public Mec Mec { get; set; }
 
-        public Hrdina(string jmeno, double zdraviAktualni, double zdraviMax, int maxUtok, int maxObrana, Mec mec)
-            : base(jmeno, zdraviAktualni, zdraviMax, maxUtok, maxObrana)
+        public Hrdina(string jmeno, double zdraviAktualni, double zdraviMax, int maxUtok, int maxObrana, Mec mec, IRandom generator)
+            : base(jmeno, zdraviAktualni, zdraviMax, maxUtok, maxObrana, generator)
         {
             Mec = mec;
         }
 
-        public Hrdina(string jmeno, double zdraviMax, int maxUtok, int maxObrana, Mec mec)
-            : this(jmeno, zdraviMax, zdraviMax, maxUtok, maxObrana, mec)
+        public Hrdina(string jmeno, double zdraviMax, int maxUtok, int maxObrana, Mec mec, IRandom generator)
+            : this(jmeno, zdraviMax, zdraviMax, maxUtok, maxObrana, mec, generator)
         {
         }
 
